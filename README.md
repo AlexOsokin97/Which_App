@@ -15,7 +15,7 @@
 * **Calculate Feature Importance:** [Guide](https://machinelearningmastery.com/calculate-feature-importance-with-python/)
 
 # Data Cleaning:
-**The Cleaning process of 'googleplaystore.csv' was very challenging and tricky. It contained many categories and for each category there were lots of missing values. I could have just deleted the rows with the missing values but it meant that I would have deleted 1637 rows of data. Altough my dataset contained around 11,000 samples, deleting 1637 meant deleting 13.7% of my whole dataset! And for me that it was alot so I decided to look for a way to fill those missing values. Here's the whole cleaning process:**
+**The Cleaning process of 'googleplaystore.csv' was very challenging and tricky. It contained many categories and for each category there were lots of missing values. I could have just deleted the rows with the missing values but it meant that I would have to delete almost 3000 rows of data. Altough my dataset contained around 11,000 samples, deleting 3000 rows meant deleting 27% of my whole dataset! And for me that it was alot so I decided to look for a way to fill those missing values. Here's the whole cleaning process:**
 * Reading the dataset using Spyder IDE.
 * Creating a copy of the dataset and by using pandas created a series with sum of all na values in each column
 * Dropping the insignificant columns
