@@ -1,7 +1,7 @@
 # Project Overview:
 * **This project focuses on helping app developers choosing the right category for their app development and predicts the popularity of an already existing apps.**
 * **Used over 10,000 app samples**
-* **Cleaned the data and created 5 datasets. One for exploritory data analysis and four for model fitting (each set has different predicted values by KNN-Imputer).**
+* 
 
 ## File Description:
 
@@ -22,7 +22,13 @@
 * Cleaning the numeric column values by removing special letters and special characters
 * Changed each column's data type for the desired type (numeric, categorical)
 * Created a copy of the cleaned dataset and applied dummies function for the categorical data.
-* Used KNN-Imputation ml algorithm (with different k_neighboors) for filling the missing numeric values.
-* Created a dataset for each Knn-algorithm (4) with different k_neighboors and a dataset for exploritory data analysis
+* Used KNN-Imputation ml algorithm for filling the missing numeric values.
 
 # EDA:
+Here I dived deeper into the dataset (after cleaning) and visualized some relationships between different variables. Here are some visualization examples:
+
+![alt text][plot1]
+![alt text][plot2]
+
+[plot1]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/corrHeatmap.png "CorrHeatmap"
+[plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/AvgInstallperCategory.png "AvgInstallperCategory"
