@@ -1,5 +1,5 @@
 # Project Overview:
-* **This project focuses on helping app developers choosing the right category for their app development and predicts the popularity of an already existing apps.**
+* **This project focuses on helping app developers to predict how popular their app would get**
 * **Used over 10,000 app samples**
 * 
 
