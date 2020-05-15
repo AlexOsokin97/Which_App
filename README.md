@@ -21,8 +21,9 @@
 * Dropping the insignificant columns
 * Cleaning the numeric column values by removing special letters and special characters
 * Changed each column's data type for the desired type (numeric, categorical)
-* Created a copy of the cleaned dataset and applied dummies function for the categorical data.
+* 
 * Used KNN-Imputation ml algorithm for filling the missing numeric values.
+*
 
 # EDA:
 Here I dived deeper into the dataset (after cleaning) and visualized some relationships between different variables. Here are some visualization examples:
