@@ -1,5 +1,5 @@
 # Project Overview:
-* **This project focuses on helping app developers to predict how popular their app would get**
+* **This project focuses on helping developers to create popular high rated apps**
 * **Used over 10,000 app samples**
 * **Used exploritory data analysis to give my data an initial cleaning**
 * **Explored the data by ploting barplots, violinplots, pieplots and many more**
