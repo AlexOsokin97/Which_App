@@ -22,7 +22,7 @@
 ![alt text][plot2]
 ![alt text][plot3] 
 
-[plot1]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/Pieplot.png "pieplot"
+[plot1]: "pieplot"
 [plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/regplots.png "regplots"
 [plot3]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
 
