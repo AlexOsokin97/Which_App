@@ -36,9 +36,12 @@ X = np.delete(X, [2],axis=1)
 encoder = LabelEncoder()
 y = encoder.fit_transform(y)
 
+from keras.utils import to_categorical
+y_binary = to_categorical(y)
+
 #splitting the data into training and testing 
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y_binary, test_size=0.2, random_state=42)
 
 #applying feature scaling (not on Rating)
 from sklearn.preprocessing import StandardScaler
@@ -55,18 +58,24 @@ from keras.layers import Dense
 neural = Sequential()
 
 #creating NN input layer
-neural.add(Dense(output_dim = 5, init = 'uniform', activation = 'relu', input_dim = 9))
+neural.add(Dense(activation="relu", input_dim=9, units=5, kernel_initializer="uniform"))
 
 #creating the NN hidden layers
-neural.add(Dense(output_dim = 5, init = 'uniform', activation = 'relu', input_dim = 5))
-neural.add(Dense(output_dim = 5, init = 'uniform', activation = 'relu', input_dim = 5))
-neural.add(Dense(output_dim = 5, init = 'uniform', activation = 'relu', input_dim = 5))
-neural.add(Dense(output_dim = 5, init = 'uniform', activation = 'relu', input_dim = 5))
-neural.add(Dense(output_dim = 5, init = 'uniform', activation = 'relu', input_dim = 5))
+neural.add(Dense(activation="relu", input_dim=5, units=5, kernel_initializer="uniform"))
+neural.add(Dense(activation="relu", input_dim=5, units=5, kernel_initializer="uniform"))
+neural.add(Dense(activation="relu", input_dim=5, units=5, kernel_initializer="uniform"))
+neural.add(Dense(activation="relu", input_dim=5, units=5, kernel_initializer="uniform"))
+neural.add(Dense(activation="relu", input_dim=5, units=5, kernel_initializer="uniform"))
 
 #creating NN output layer
-neural.add(Dense(output_dim = 33, init = 'uniform', activation = 'softmax', input_dim = 5))
+neural.add(Dense(activation="softmax", input_dim=5, units=33, kernel_initializer="uniform"))
 
 #compiling the ANN (using stochastic gradient descent)
-neural.compile(optimizer = 'adam', loss='categorical_crossentropy', metrics=['accuarcy'])
+neural.compile(optimizer = 'adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+#fitting the model
+neural.fit(X_train, y_binary, batch_size=10, nb_epoch=100)
+
+
+
 
