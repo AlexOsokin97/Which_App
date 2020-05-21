@@ -3,14 +3,12 @@
 * **Used over 10,000 app samples**
 * **Used exploritory data analysis to give my data an initial cleaning**
 * **Explored the data by ploting barplots, violinplots, pieplots and many more**
-* **Researched deeper into the dataset i.e: found the most expesive app, which are the most famous apps...**
-
-## File Description:
+* **Researched deeper into the dataset i.e: found the most expesive app, which are the most famous apps.**
 
 ## Code & Resources:
 * **Python Version**: 3.8.2
 * **Original Data Set:** [Here](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv)
-* **Packages:** pandas, numpy, matplotlib, seaborn, sklearn. scipy
+* **Packages:** pandas, numpy, matplotlib, seaborn, scipy
 * **IDES Used:** Anaconda, Spyder, Jupyter-Notebook, Jupyter-Lab
 * **Related plotting examples:** [kaggle](https://www.kaggle.com/tanetboss/how-to-get-high-rating-on-play-store)
 * **Statistical Hypothesys Testing** [Here](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
