@@ -48,7 +48,7 @@
 # The Models:
 **In my model building process I built 3 different Artificial Neural Networks:**
 
-## Model 1:
+### Model 1:
 
 <img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
  
@@ -58,7 +58,7 @@
 * Loss_function: **mean_squared_logarithmic_error** 
 * Metrics_function: **mse** 
 
-## Model 2:
+### Model 2:
 
 <img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn1.svg">
 
@@ -68,7 +68,7 @@
 * Loss_function: **mean_squared_error** 
 * Metrics_function: **mse**
 
-## Model 3:
+### Model 3:
 
 <img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn2.svg">
 
@@ -77,3 +77,29 @@
 * Optimizer: **Gradient Descent** 
 * Loss_function: **mean_absolute_error** 
 * Metrics_function: **mse**
+
+# Model Performance:
+**Each model had a unique architecture with intresting results**
+
+### Model 1:
+* **Test Data Loss Score: 0.0013**
+* **Test Data Mean Squared Errors: 0.26**
+
+![alt text][plot4] 
+
+### Model 2:
+* **Test Data Loss Score: 0.25**
+* **Test Data Mean Squared Errors: 0.25**
+
+![alt text][plot5] 
+
+
+### Model 3:
+* **Test Data Loss Score: 0.35**
+* **Test Data Mean Squared Errors: 0.30**
+
+![alt text][plot6] 
+
+[plot4]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_1.png "loss/mse m1"
+[plot5]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_2.png "loss/mse m2"
+[plot6]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_3.png "loss/mse m3"
