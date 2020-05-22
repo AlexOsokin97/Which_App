@@ -102,6 +102,6 @@
 
 ![alt text][plot6] 
 
-[plot4]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_1.png "loss/mse m1"
-[plot5]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_2.png "loss/mse m2"
-[plot6]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_3.png "loss/mse m3"
+[plot4]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figs/Figure_1.png "loss/mse m1"
+[plot5]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figs/Figure_2.png "loss/mse m2"
+[plot6]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figs/Figure_3.png "loss/mse m3"
