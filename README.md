@@ -41,17 +41,39 @@
 * **Used panda's "get_dummies" function in order to get a numerical representation of the categorical data**
 * **Applied Standardization for feature scalling**
 * **Created a training and testing sets (7000+ samples for training & 2000+ samples for testing)**
-* **I initialized 3 NN models with different amount of layers. Different activation, optimization, loss and evaluation matrices functions. **
-* **Created variables the stored each model's loss and mse preformance on the training and testing data**
-* **Finally, I created 3 different plots for each model to see how quickly it took to each model to converge**
+* **I initialized 3 NN models with different amount of layers. Different activation, optimization, loss and evaluation matrices functions.**
+* **Created variables that stored each model's loss and mse preformance on the training and testing data**
+* **Finally, I created 3 different plots for each model to see how quickly and how well it took to each model to converge when it was used on the training and testing sets**
 
 # The Models:
 **In my model building process I built 3 different Artificial Neural Networks:**
 
-<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
+## Model 1:
 
-**Model 1:** * Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. 
-             * Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
-             * Optimizer: **AdaGrad** 
-             * loss_function: **msle** 
-             * metrics_function: **mse** 
+<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
+ 
+* Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. 
+* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+* Optimizer: **AdaGrad** 
+* Loss_function: **mean_squared_logarithmic_error** 
+* Metrics_function: **mse** 
+
+## Model 2:
+
+<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn1.svg">
+
+* Layers: 39 neurons in input_layer, 2X20 neurons in hidden_layers, 1 neuron in output_layer. 
+* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+* Optimizer: **Gradient Descent** 
+* Loss_function: **mean_squared_error** 
+* Metrics_function: **mse**
+
+## Model 3:
+
+<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn2.svg">
+
+* Layers: 39 neurons in input_layer, 6X20 neurons in hidden_layers, 1 neuron in output_layer. 
+* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+* Optimizer: **Gradient Descent** 
+* Loss_function: **mean_absolute_error** 
+* Metrics_function: **mse**
