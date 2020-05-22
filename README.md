@@ -6,16 +6,18 @@
 * **Researched deeper into the dataset i.e: found the most expesive app, which are the most famous apps.**
 * **Cleaned and preprocessed the data for the model usage**
 * **Trained and tested 3 different Artificial Neural Networks models to predict app's rating**
+* **Evaluated each model's performance on the test set and created plots that show the convergence process of each model**
 
 ## Code & Resources:
 * **Python Version**: 3.8.2
 * **Original Data Set:** [Here](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv)
-* **Packages:** pandas, numpy, matplotlib, seaborn, scipy
+* **Packages:** pandas, numpy, matplotlib, seaborn, scipy, sklearn, keras
 * **IDES Used:** Anaconda, Spyder, Jupyter-Notebook, Jupyter-Lab
 * **Related plotting examples:** [kaggle](https://www.kaggle.com/tanetboss/how-to-get-high-rating-on-play-store)
 * **Statistical Hypothesys Testing** [Here](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
 * **Activation Functions:** [Here](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
 * **Loss Functions:** [Here](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
+* **Create NN Diagrams:** [Here](http://alexlenail.me/NN-SVG/index.html)
 
 ## Data Cleaning:
 * **Created a copy of the original dataset**
