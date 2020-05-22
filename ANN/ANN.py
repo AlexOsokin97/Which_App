@@ -82,7 +82,7 @@ plt.legend()
 plt.show()
 
 
-###############################################################################################################################
+###############################################################################################
 
 #initializing the ANN
 model = Sequential()
@@ -98,7 +98,7 @@ model.add(Dense(activation="relu" , input_dim=20, units=20, kernel_initializer="
 model.add(Dense(activation="linear", input_dim=20, units=1, kernel_initializer="he_uniform"))
 
 #compiling the ANN
-model.compile(optimizer = "sgd" , loss="mean_squared_error")
+model.compile(optimizer = "sgd" , loss="mean_squared_error", metrics=["mse"])
 
 # fit model
 history2 = model.fit(X_train, y_train, validation_data=(X_test, y_test), epochs=100, verbose=0)
@@ -108,13 +108,20 @@ train_mse_model = model.evaluate(X_train, y_train, verbose=0)
 test_mse_model = model.evaluate(X_test, y_test, verbose=0)
 
 # plot loss during training
-plt.title('Loss / Mean Squared Error')
+plt.subplot(211)
+plt.title('Loss')
 plt.plot(history2.history['loss'], label='train')
 plt.plot(history2.history['val_loss'], label='test')
 plt.legend()
+# plot mse during training
+plt.subplot(212)
+plt.title('Mean Squared Error')
+plt.plot(history2.history['mse'], label='train')
+plt.plot(history2.history['val_mse'], label='test')
+plt.legend()
 plt.show()
 
-#######################################################################################################################################
+###############################################################################################
 
 #initializing the ANN
 model2 = Sequential()
@@ -144,16 +151,22 @@ train_mse_model2 = model2.evaluate(X_train, y_train, verbose=0)
 test_mse_model2 = model2.evaluate(X_test, y_test, verbose=0)
 
 # plot loss during training
+plt.subplot(211)
 plt.title('Loss')
 plt.plot(history3.history['loss'], label='train')
 plt.plot(history3.history['val_loss'], label='test')
 plt.legend()
+# plot mse during training
+plt.subplot(212)
+plt.title('Mean Squared Error')
+plt.plot(history3.history['mse'], label='train')
+plt.plot(history3.history['val_mse'], label='test')
+plt.legend()
 plt.show()
 
-neural.save("ann_model")
-
-
-
+##############################################################################################
+neural.save("neural_network.h5")
+print("Saved model to disk")
 
 
 
