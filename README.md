@@ -46,6 +46,8 @@
 * **Finally, I created 3 different plots for each model to see how quickly it took to each model to converge**
 
 # The Models:
-**In my model building process I built 3 different Artificial N
-![Alt text](.nn.svg)
+**In my model building process I built 3 different Artificial Neural Networks:**
+
 <img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
+
+**Model 1:** *Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. *Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. *Optimizer: **AdaGrad** *loss_function: **msle** *metrics_function: **mse** 
