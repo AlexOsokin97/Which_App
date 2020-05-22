@@ -145,7 +145,17 @@ test_mse_model2 = model2.evaluate(X_test, y_test, verbose=0)
 
 # plot loss during training
 plt.title('Loss')
-plt.plot(history2.history['loss'], label='train')
-plt.plot(history2.history['val_loss'], label='test')
+plt.plot(history3.history['loss'], label='train')
+plt.plot(history3.history['val_loss'], label='test')
 plt.legend()
 plt.show()
+
+neural.save("ann_model")
+
+
+
+
+
+
+
+
