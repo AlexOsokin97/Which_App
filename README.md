@@ -6,16 +6,18 @@
 * **Researched deeper into the dataset i.e: found the most expesive app, which are the most famous apps.**
 * **Cleaned and preprocessed the data for the model usage**
 * **Trained and tested 3 different Artificial Neural Networks models to predict app's rating**
+* **Evaluated each model's performance on the test set and created plots that show the convergence process of each model**
 
 ## Code & Resources:
 * **Python Version**: 3.8.2
 * **Original Data Set:** [Here](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv)
-* **Packages:** pandas, numpy, matplotlib, seaborn, scipy
+* **Packages:** pandas, numpy, matplotlib, seaborn, scipy, sklearn, keras
 * **IDES Used:** Anaconda, Spyder, Jupyter-Notebook, Jupyter-Lab
 * **Related plotting examples:** [kaggle](https://www.kaggle.com/tanetboss/how-to-get-high-rating-on-play-store)
 * **Statistical Hypothesys Testing** [Here](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
 * **Activation Functions:** [Here](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
 * **Loss Functions:** [Here](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
+* **Create NN Diagrams:** [Here](http://alexlenail.me/NN-SVG/index.html)
 
 ## Data Cleaning:
 * **Created a copy of the original dataset**
@@ -41,17 +43,65 @@
 * **Used panda's "get_dummies" function in order to get a numerical representation of the categorical data**
 * **Applied Standardization for feature scalling**
 * **Created a training and testing sets (7000+ samples for training & 2000+ samples for testing)**
-* **I initialized 3 NN models with different amount of layers. Different activation, optimization, loss and evaluation matrices functions. **
-* **Created variables the stored each model's loss and mse preformance on the training and testing data**
-* **Finally, I created 3 different plots for each model to see how quickly it took to each model to converge**
+* **I initialized 3 NN models with different amount of layers. Different activation, optimization, loss and evaluation matrices functions.**
+* **Created variables that stored each model's loss and mse preformance on the training and testing data**
+* **Finally, I created 3 different plots for each model to see how quickly and how well it took to each model to converge when it was used on the training and testing sets**
 
 # The Models:
 **In my model building process I built 3 different Artificial Neural Networks:**
 
-<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
+### Model 1:
 
-**Model 1:** * Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. 
-             * Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
-             * Optimizer: **AdaGrad** 
-             * loss_function: **msle** 
-             * metrics_function: **mse** 
+<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
+ 
+* Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. 
+* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+* Optimizer: **AdaGrad** 
+* Loss_function: **mean_squared_logarithmic_error** 
+* Metrics_function: **mse** 
+
+### Model 2:
+
+<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn1.svg">
+
+* Layers: 39 neurons in input_layer, 2X20 neurons in hidden_layers, 1 neuron in output_layer. 
+* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+* Optimizer: **Gradient Descent** 
+* Loss_function: **mean_squared_error** 
+* Metrics_function: **mse**
+
+### Model 3:
+
+<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn2.svg">
+
+* Layers: 39 neurons in input_layer, 6X20 neurons in hidden_layers, 1 neuron in output_layer. 
+* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+* Optimizer: **Gradient Descent** 
+* Loss_function: **mean_absolute_error** 
+* Metrics_function: **mse**
+
+# Model Performance:
+**Each model had a unique architecture with intresting results**
+
+### Model 1:
+* **Test Data Loss Score: 0.0013**
+* **Test Data Mean Squared Errors: 0.26**
+
+![alt text][plot4] 
+
+### Model 2:
+* **Test Data Loss Score: 0.25**
+* **Test Data Mean Squared Errors: 0.25**
+
+![alt text][plot5] 
+
+
+### Model 3:
+* **Test Data Loss Score: 0.35**
+* **Test Data Mean Squared Errors: 0.30**
+
+![alt text][plot6] 
+
+[plot4]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_1.png "loss/mse m1"
+[plot5]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_2.png "loss/mse m2"
+[plot6]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figure_3.png "loss/mse m3"
