@@ -50,4 +50,8 @@
 
 <img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
 
-**Model 1:** *Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. *Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. *Optimizer: **AdaGrad** *loss_function: **msle** *metrics_function: **mse** 
+**Model 1:** * Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. 
+             * Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
+             * Optimizer: **AdaGrad** 
+             * loss_function: **msle** 
+             * metrics_function: **mse** 
