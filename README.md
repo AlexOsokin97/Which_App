@@ -1,9 +1,9 @@
 # Project Overview:
 * **This project focuses on helping developers to create popular high rated apps**
 * **Used over 10,000 app samples**
-* **Used exploritory data analysis to give my data an initial cleaning**
-* **Explored the data by ploting barplots, violinplots, pieplots and many more**
-* **Researched deeper into the dataset i.e: found the most expesive app, which are the most famous apps.**
+* **Used exploratory data analysis to give my data an initial cleaning**
+* **Explored the data by plotting bar-plots, violin-plots, pie-plots and many more**
+* **Researched deeper into the dataset i.e: found the most expensive app, which are the most famous apps.**
 * **Cleaned and preprocessed the data for the model usage**
 * **Trained and tested 3 different Artificial Neural Networks models to predict app's rating**
 * **Evaluated each model's performance on the test set and created plots that show the convergence process of each model**
