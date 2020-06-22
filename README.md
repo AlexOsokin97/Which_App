@@ -17,8 +17,16 @@
 **One of the most intresting parts in this project. I explored the data by applying a big variaty of plots and graphs, used regression plots to find correlation between variables. I also used pandas to clean and manipulate the data in order to gain more information and to make it more easy to extract and use. Here are some examples from my analysis advanture:**
 
 ![alt text][plot1] 
+
+**(...)**
+
 ![alt text][plot2]
+
+**(...)**
+
 ![alt text][plot3] 
+
+**(...)**
 
 [plot1]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/billioninstalls.png "billioninstalls"
 [plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/regplots.png "regplots"
