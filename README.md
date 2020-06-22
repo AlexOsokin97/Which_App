@@ -1,32 +1,19 @@
 # Project Overview:
-* **This project focuses on helping developers to create popular high rated apps**
-* **Used over 10,000 app samples**
-* **Used exploratory data analysis to give my data an initial cleaning**
-* **Explored the data by plotting bar-plots, violin-plots, pie-plots and many more**
-* **Researched deeper into the dataset i.e: found the most expensive app, which are the most famous apps.**
-* **Cleaned and preprocessed the data for the model usage**
-* **Trained and tested 3 different Artificial Neural Networks models to predict app's rating**
-* **Evaluated each model's performance on the test set and created plots that show the convergence process of each model**
+***Are you a developer who has an idea for a new app but not sure how successful it would be?***
 
-## Code & Resources:
-* **Python Version**: 3.8.2
-* **Original Data Set:** [Here](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv)
-* **Packages:** pandas, numpy, matplotlib, seaborn, scipy, sklearn, keras
-* **IDES Used:** Anaconda, Spyder, Jupyter-Notebook, Jupyter-Lab
-* **Related plotting examples:** [kaggle](https://www.kaggle.com/tanetboss/how-to-get-high-rating-on-play-store)
-* **Statistical Hypothesys Testing** [Here](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
-* **Activation Functions:** [Here](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
-* **Loss Functions:** [Here](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
-* **Create NN Diagrams:** [Here](http://alexlenail.me/NN-SVG/index.html)
+**Nowadays, in the 21th century with a booming development industry it is hard to come up with a new idea for an app/software. Have you ever searched for a specific app in app store or apple store and saw a large amount of apps with the same concept?**
 
-## Data Cleaning:
+**Unlike in the 20th century, when the field of software development was still making its first steps and smart phones weren't even invented yet it was hard to a random person with an idea to sit down and with ease fulfill his vision. This is because in the past computational power wasn't as advanced and cheap as it's today and you would most like needed to have a degree in the field of computer science. But today, with fast and easy accessible information, with thousands of different courses online everyone can learn and develop anything they want.**
+
+**In this project I am ought to give developers a quick tour on the app market and predict the rating of their future app by the necessary features that they'll need to provide. How?  By using a dataset with 10,000 different apps from different categories, cleaning and remodeling the data, exploring the dataset by creating complex graphs and plots which explain every feature and show correlation between them and training a Machine Learning model which uses many app related features to predict an app's rating** 
+
+## Data Cleaning & Exploratory Data Analysis:
 * **Created a copy of the original dataset**
 * **Removed irrelavant columns**
 * **Transformed columns into numerical data by removing special characters**
 * **Used time series transformation inorder to see how many days have passed**
 * **Created new columns by combining correlated data**
 
-# EDA:
 **One of the most intresting parts in this project. I explored the data by applying a big variaty of plots and graphs, used regression plots to find correlation between variables. I also used pandas to clean and manipulate the data in order to gain more information and to make it more easy to extract and use. Here are some examples from my analysis advanture:**
 
 ![alt text][plot1] 
@@ -37,71 +24,16 @@
 [plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/regplots.png "regplots"
 [plot3]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
 
-# Model Building:
-**In this project I decided to use an Artificial Neural Network models. Neural Networks are very powerful models which can give high rated results so, I wanted to see how they'll preform on this dataset.**
-* **The model was trained to predict the app's rating according to 39 different features**
-* **Used panda's "get_dummies" function in order to get a numerical representation of the categorical data**
-* **Applied Standardization for feature scalling**
-* **Created a training and testing sets (7000+ samples for training & 2000+ samples for testing)**
-* **I initialized 3 NN models with different amount of layers. Different activation, optimization, loss and evaluation matrices functions.**
-* **Created variables that stored each model's loss and mse preformance on the training and testing data**
-* **Finally, I created 3 different plots for each model to see how quickly and how well it took to each model to converge when it was used on the training and testing sets**
-
-# The Models:
-**In my model building process I built 3 different Artificial Neural Networks:**
-
-### Model 1:
-
-<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn.svg">
- 
-* Layers: 39 neurons in input_layer, 4X20 neurons in hidden_layers, 1 neuron in output_layer. 
-* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
-* Optimizer: **AdaGrad** 
-* Loss_function: **mean_squared_logarithmic_error** 
-* Metrics_function: **mse** 
-
-### Model 2:
-
-<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn1.svg">
-
-* Layers: 39 neurons in input_layer, 2X20 neurons in hidden_layers, 1 neuron in output_layer. 
-* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
-* Optimizer: **Gradient Descent** 
-* Loss_function: **mean_squared_error** 
-* Metrics_function: **mse**
-
-### Model 3:
-
-<img src="https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/models%20svg/nn2.svg">
-
-* Layers: 39 neurons in input_layer, 6X20 neurons in hidden_layers, 1 neuron in output_layer. 
-* Activation Functions: input and hidden layers: **ReLU** , Output layer: **Linear**. 
-* Optimizer: **Gradient Descent** 
-* Loss_function: **mean_absolute_error** 
-* Metrics_function: **mse**
-
-# Model Performance:
-**Each model had a unique architecture with intresting results**
-
-### Model 1:
-* **Test Data Loss Score: 0.0013**
-* **Test Data Mean Squared Errors: 0.26**
-
-![alt text][plot4] 
-
-### Model 2:
-* **Test Data Loss Score: 0.25**
-* **Test Data Mean Squared Errors: 0.25**
-
-![alt text][plot5] 
+# Model Building & Performance:
 
 
-### Model 3:
-* **Test Data Loss Score: 0.35**
-* **Test Data Mean Squared Errors: 0.30**
-
-![alt text][plot6] 
-
-[plot4]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figs/Figure_1.png "loss/mse m1"
-[plot5]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figs/Figure_2.png "loss/mse m2"
-[plot6]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/ANN/Figs/Figure_3.png "loss/mse m3"
+# Code & Resources:
+* **Python Version**: 3.8.2
+* **Original Data Set:** [Here](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv)
+* **Packages:** pandas, numpy, matplotlib, seaborn, scipy, sklearn, keras
+* **IDES Used:** Anaconda, Spyder, Jupyter-Notebook, Jupyter-Lab
+* **Related plotting examples:** [kaggle](https://www.kaggle.com/tanetboss/how-to-get-high-rating-on-play-store)
+* **Statistical Hypothesys Testing** [Here](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
+* **Activation Functions:** [Here](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
+* **Loss Functions:** [Here](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
+* **Create NN Diagrams:** [Here](http://alexlenail.me/NN-SVG/index.html)
