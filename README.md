@@ -8,13 +8,11 @@
 **In this project I am ought to give developers a quick tour on the app market and predict the rating of their future app by the necessary features that they'll need to provide. How?  By using a dataset with 10,000 different apps from different categories, cleaning and remodeling the data, exploring the dataset by creating complex graphs and plots which explain every feature and show correlation between them and training a Machine Learning model which uses many app related features to predict an app's rating** 
 
 ## Data Cleaning & Exploratory Data Analysis:
-* **Created a copy of the original dataset**
-* **Removed irrelavant columns**
-* **Transformed columns into numerical data by removing special characters**
-* **Used time series transformation inorder to see how many days have passed**
-* **Created new columns by combining correlated data**
+***After getting the data and exploring it a bit, it was time to start the cleaning phase. Data comes in all shapes and sizes and 99% of the time it the doesn't come in a form you want it to be.***
 
-**One of the most intresting parts in this project. I explored the data by applying a big variaty of plots and graphs, used regression plots to find correlation between variables. I also used pandas to clean and manipulate the data in order to gain more information and to make it more easy to extract and use. Here are some examples from my analysis advanture:**
+**I started out the cleaning process by firstly creating a copy of the original dataset and finding how many NaN values were there in each column and the precentage. Secondly, I dropped the columns which contained too much missing data. Thirdly, I used statistical methods such as mean and median to replace missing values and correlation matrix to find which columns were valuable and which were useless (for my case). Finally, I used lambda functions to transform the columns to their right data type (int, string) by removing unrelated information.**
+
+**Finally, when the cleaning part was over the next phase was exploritory data analysis in which, I explored the data by creating variaty of plots and graphs, used regression plots to visualize the correlation between features. Here are some examples from my analysis advanture:**
 
 ![alt text][plot1] 
 
