@@ -16,22 +16,34 @@
 
 ![alt text][plot1] 
 
-**(...)**
+***This barplot represents all the categories with apps above 1 billion download. As you can see, the top category with 18 apps with over 1 billion downloads is Communication followed by Social with 8 apps and Game with 7 apps. This plot although basic gives us alot of information to which category your app should be related. In addition this plot also gives us information that even in the modern age with computers, laptops and smartphones being on our side 24/7, we still love communicate and sociallize with each other.***
 
-![alt text][plot2]
 
-**(...)**
+![alt text][plot2] 
 
-![alt text][plot3] 
-
-**(...)**
+***With the help of the barplot I managed to get information about the average app rating among the popular apps. The reason I wanted to acquire that information was to see whether those apps are also of a high quality. The distribution plot helped me to gain a rating's frequency among the popular apps and also that there were some unusual apps with rating below 4.0.***  
 
 [plot1]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/billioninstalls.png "billioninstalls"
-[plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/regplots.png "regplots"
-[plot3]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
+[plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
 
 # Model Building & Performance:
+***Does the data has enough information and features to accuratly predict an app's rating?***
 
+***After getting the data, cleaning, remodeling and exploring it with statistics and visualization plots it was time to check if a machine learning model could succefully predict an app's rating.***
+
+**The first step I did was to remove outliers from the data because outliers are unusual and rare observations in other words, they are unique occurrences and have a very slim chance of happening again so I did not want them to affect my model.**
+
+* Removal of outliers: There are many methods to remove outliers. I decided to create scatter plots for each feature which could have outliers and assigned a threshold with the max value each observation could have (value which is > max = outlier). The maximum value was decided after looking at the area where most of the data points were scattered
+
+**The second step was encoding the categorical data into 1's|0's. Because there were many categories I ended up with a dataset with more columns where the new columns consisted of 1 and 0 values to indicate whether a category was present in the observation.**
+
+* Encoding method: I used the pandas built in function pandas.get_dummies which transforms each value in a categorical column to a new column with values of 1 and 0.
+
+**The third step was importing model selection packages which would help me optimize and tune my models to get better results. I used the following packages:**
+
+* *train_test_split:* This package takes your data and splits it to train data and testing data. I used this package in order to create a dataset for a model to learn from and a data set to test the model in order to check how well the model performed.
+
+* *cross_val_score:* 
 
 # Code & Resources:
 * **Python Version**: 3.8.2
