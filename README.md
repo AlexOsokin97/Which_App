@@ -16,31 +16,15 @@
 
 ![alt text][plot1] 
 
+***This barplot represents all the categories with apps above 1 billion download. As you can see, the top category with 18 apps with over 1 billion downloads is Communication followed by Social with 8 apps and Game with 7 apps. This plot although basic gives us alot of information to which category your app should be related. In addition this plot also gives us information that even in the modern age with computers, laptops and smartphones being on our side 24/7, we still love communicate and sociallize with each other***
 
 
+![alt text][plot2] 
 
-
-**(...)**
-
-![alt text][plot2]
-
-
-
-
-
-**(...)**
-
-![alt text][plot3] 
-
-
-
-
-
-**(...)**
+***With the help of the barplot I managed to get information about the average app rating among the popular apps. The reason I wanted to acquire that information was to see whether those apps are also of a high quality. The distribution plot helped me to gain a rating's frequency among the popular apps and also that there were some unusual apps with rating below 4.0***  
 
 [plot1]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/billioninstalls.png "billioninstalls"
-[plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/regplots.png "regplots"
-[plot3]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
+[plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
 
 # Model Building & Performance:
 
