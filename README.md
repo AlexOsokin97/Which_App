@@ -16,13 +16,25 @@
 
 ![alt text][plot1] 
 
+
+
+
+
 **(...)**
 
 ![alt text][plot2]
 
+
+
+
+
 **(...)**
 
 ![alt text][plot3] 
+
+
+
+
 
 **(...)**
 
