@@ -67,9 +67,9 @@ def model_performance(filename,testing_features, testing_label):
         accuracy = mean_absolute_error(testing_label,y_pred)
         return accuracy
     
-def feature_scaling(training_features, testing_features, train_cols, test_cols, method):
-    training_features[:, train_cols] = method.fit_transform(training_features[:, train_cols])
-    testing_features[:, test_cols] = method.transform(testing_features[:, test_cols])
+def feature_scaling(training_features, testing_features, cols, method):
+    training_features[:, cols] = method.fit_transform(training_features[:, cols])
+    testing_features[:, cols] = method.transform(testing_features[:, cols])
     return training_features, testing_features
 
 ###########################################################################################
@@ -117,7 +117,7 @@ save_model(lm, 'linear_model')
 svr_m = SVR(kernel='linear')
 
 sc = StandardScaler()
-X_train_norm, X_test_norm = feature_scaling(X_train, X_test, [0, 1, 2, 5], [0,1,2,5], sc)
+X_train_norm, X_test_norm = feature_scaling(X_train, X_test, [0, 1, 2, 5], sc)
 
 np.mean(cross_val_score(svr_m,X_train_norm,y_train,scoring='neg_mean_squared_error', cv=10))
 
