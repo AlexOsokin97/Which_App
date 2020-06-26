@@ -41,9 +41,17 @@
 
 **The third step was importing model selection packages which would help me optimize and tune my models to get better results. I used the following packages:**
 
-* *train_test_split:* This package takes your data and splits it to train data and testing data. I used this package in order to create a dataset for a model to learn from and a data set to test the model in order to check how well the model performed.
+* *train_test_split:* This package takes your data and splits it to train data and testing data. I used this package in order to create a dataset for a model to learn from and a data set to test the model in order to check how well the model performed. ***In this project I split the data into 80% training set and 20% testing set***
 
-* *cross_val_score:* 
+* *cross_val_score:* This package uses your model to test it how well it performes on the dataset by taking the dataset and splits it to K folds where K-1 folds are used for training and 1 fold for testing. It splits the dataset until all possible combinations are done. ***I used 10-fold cross validation***
+
+* *grid_search_cv:* This package allows parameter tuning of a model and testing each combination on K folds and picking the best one. ***In my case I used 5 fold split***
+
+**The forth step was to choose the scoring metric to see each model's performance on the training set and on the testing set.**
+
+* *mean_absolute_error:* This metric gives the average magnitude of the errors a set of predictions without considering their direction.
+
+**In this step I created 
 
 # Code & Resources:
 * **Python Version**: 3.8.2
