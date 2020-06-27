@@ -51,7 +51,17 @@
 
 * *mean_absolute_error:* This metric gives the average magnitude of the errors a set of predictions without considering their direction.
 
-**In this step I created 
+**In this step I created 5 functions each for different purpose and would be used by every model. The functions are:**
+
+* *naive_model:* which fits the given model into cross_val_score and returns the average score of K scores
+
+* *complex_model:* which fits the given model into GridSearchCV and returns the params of the best model and the score of that model
+
+* *save_model:* a function that saves a given model using pickle package into a a .sav file
+
+* *model_performance:* which uses a given model's predict function to predict the Rating of the unseen data and then evaluating the outcome using mean_absolute_error metric
+
+* *feature_scaling:* a functions which scales given features using a user provided method.
 
 # Code & Resources:
 * **Python Version**: 3.8.2
