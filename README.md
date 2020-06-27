@@ -98,7 +98,7 @@
 
 # Conclusion:
 
-***As it was seen each model had different performances when used different model_selection methods. When I used 10-fold cross validation and grid_search with 5-fold cross validation, the performance of each model was the same except for random forest. The reason behind this might be because I used 5-fold cross validation. After saving each algorithm's best model I used them to predict the y of test_data and used  MAE to evaluate the outcome. SVM had the best performance of 0.32 while RandomForest had the worst of 0.54. The reason SVM had the best performance might be because it can work on infinite dimensions and as a result had good class seperation which allowed it to fit a good line.
+***As it was seen each model had different performances when used different model_selection methods. When I used 10-fold cross validation and grid_search with 5-fold cross validation, the performance of each model was the same except for random forest. The reason behind this might be because I used 5-fold cross validation. After saving each algorithm's best model I used them to predict the y of test_data and used  MAE to evaluate the outcome. SVM had the best performance of 0.32 while RandomForest had the worst of 0.54. The reason SVM had the best performance might be because it can work on infinite dimensions and as a result had good class seperation which allowed it to fit a good line.***
 
 # Code & Resources:
 * **Python Version**: 3.8.2
