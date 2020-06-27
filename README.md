@@ -26,10 +26,10 @@
 [plot1]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/billioninstalls.png "billioninstalls"
 [plot2]: https://github.com/AlexOsokin97/Which_App_Category/blob/master/Data%20Analysis/pngs/popularapps.png "Popular Apps"
 
-# Model Building & Performance:
+# Model Building:
 ***Does the data has enough information and features to accuratly predict an app's rating?***
 
-***After getting the data, cleaning, remodeling and exploring it with statistics and visualization plots it was time to check if a machine learning model could succefully predict an app's rating.***
+***After getting the data, cleaning, remodeling and exploring it with statistics and visualization plots it was time to check if a machine learning model could succefully predict an app's rating. But first I needed to set up the environment so that model building was easy, clean and fast***
 
 **The first step I did was to remove outliers from the data because outliers are unusual and rare observations in other words, they are unique occurrences and have a very slim chance of happening again so I did not want them to affect my model.**
 
@@ -63,13 +63,46 @@
 
 * *feature_scaling:* a functions which scales given features using a user provided method.
 
+**For this project I chose 4 different algorithms:**
+
+* *RandomForest Regression:* An ensemble time algorithm that builds N random trees. I chose this algorithm because my data had a large amount of features that the algorithm could use and experiment with.
+
+* *Lasso Regression:* A Linear type model which uses feature selection and regularization in order to enhance the prediction accuracy. I used this type of model because my dataset had many features and feature scaling was not necessary as it uses regularization
+
+* *Linear Regression:* A Linear model that uses multiple features to fit a line that best fits the data. I used this type of algorithm because I wanted to check if a simple algorithm such as Linear Regression could fit the data and make good prediction. In addition, simpler algorithm means less computational power and time.
+
+* *Linear Support Vector Machines:* A Linear algorithm that uses the help of hyperplanes to seperate the data into classes and fit a line that best describes the relationship between features X and y. I chose this algorithm because it is able to work with infinite dimensions and could show good performance on large datasets.
+
+## Model Performance:
+
+**Each model's performance on the training set using the default model params, 10 fold cross validation and neg_mean_absolute_error metric:**
+
+* RandomForest Regression: MAE = -0.29
+* Lasso Regression: MAE = -0.34
+* Linear Regression: MAE = -0.34
+* SVM: MAE = -0.33
+
+**applying each model on the training set using grid_search with 5 fold cross validation and neg_mean_absolute_error:**
+
+* RandomForest Regression: MAE = -0.31
+* Lasso Regression: MAE = -0.34
+* Linear Regression: ***I did not apply tuning for Linear Regression because there were not much tuning options***
+* SVM: MAE = -0.33
+
+**using the best saved models of each algorithm to make predictions on the test_data and using mean_absolute_error to evaluate the performance of each model:**
+
+* RandomForest Regression: MAE = 0.54
+* Lasso Regression: MAE = 0.35
+* Linear Regression: 0.34
+* SVM: MAE = 0.32
+
+# Conclusion:
+
+***As it was seen each model had different performances when used different model_selection methods. When I used 10-fold cross validation and grid_search with 5-fold cross validation, the performance of each model was the same except for random forest. The reason behind this might be because I used 5-fold cross validation. After saving each algorithm's best model I used them to predict the y of test_data and used  MAE to evaluate the outcome. SVM had the best performance of 0.32 while RandomForest had the worst of 0.54. The reason SVM had the best performance might be because it can work on infinite dimensions and as a result had good class seperation which allowed it to fit a good line.
+
 # Code & Resources:
 * **Python Version**: 3.8.2
 * **Original Data Set:** [Here](https://www.kaggle.com/lava18/google-play-store-apps#googleplaystore.csv)
-* **Packages:** pandas, numpy, matplotlib, seaborn, scipy, sklearn, keras
+* **Packages:** pandas, numpy, matplotlib, seaborn, scipy, sklearn
 * **IDES Used:** Anaconda, Spyder, Jupyter-Notebook, Jupyter-Lab
-* **Related plotting examples:** [kaggle](https://www.kaggle.com/tanetboss/how-to-get-high-rating-on-play-store)
 * **Statistical Hypothesys Testing** [Here](https://machinelearningmastery.com/statistical-hypothesis-tests-in-python-cheat-sheet/)
-* **Activation Functions:** [Here](https://towardsdatascience.com/activation-functions-neural-networks-1cbd9f8d91d6)
-* **Loss Functions:** [Here](https://machinelearningmastery.com/how-to-choose-loss-functions-when-training-deep-learning-neural-networks/)
-* **Create NN Diagrams:** [Here](http://alexlenail.me/NN-SVG/index.html)
